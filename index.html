@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Manager - Queue DSA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🍔 Food Order Manager</h1>
+    <p>DSA Project Using Queue (FIFO)</p>
+</header>
+
+<main>
+    <section class="order-form">
+        <h2>Place New Order</h2>
+
+        <input type="text" id="customerName" placeholder="Customer name">
+
+        <select id="foodItem">
+            <option value="Pizza" data-price="180">🍕 Pizza - ₹180</option>
+            <option value="Burger" data-price="120">🍔 Burger - ₹120</option>
+            <option value="Sandwich" data-price="90">🥪 Sandwich - ₹90</option>
+            <option value="Pasta" data-price="150">🍝 Pasta - ₹150</option>
+            <option value="Fries" data-price="80">🍟 Fries - ₹80</option>
+            <option value="Momos" data-price="100">🥟 Momos - ₹100</option>
+        </select>
+
+        <button onclick="placeOrder()">➕ Place Order</button>
+    </section>
+
+    <section class="stats">
+        <div>
+            <h3>Orders Waiting</h3>
+            <p id="waitingCount">0</p>
+        </div>
+        <div>
+            <h3>Completed Orders</h3>
+            <p id="completedCount">0</p>
+        </div>
+        <div>
+            <h3>Total Sales</h3>
+            <p id="totalSales">₹0</p>
+        </div>
+    </section>
+
+    <section class="queue-section">
+        <h2>🍽️ Current Order Queue</h2>
+        <p class="hint">FIFO: First In, First Out</p>
+
+        <div id="queue" class="queue">
+            <p class="empty">No orders in the queue.</p>
+        </div>
+
+        <button class="process-btn" onclick="processOrder()">👨‍🍳 Process Next Order</button>
+    </section>
+
+    <section class="history-section">
+        <h2>📋 Order History</h2>
+        <ul id="history">
+            <li>No completed orders yet.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>DSA Project • Food Order Manager • Queue Data Structure</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
